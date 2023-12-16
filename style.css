@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    background: rgb(230, 230, 230);
+    font-size: 24px;
+    min-height: 330px;
+    min-width: 1000px;
+    background: url(Untitled\ design.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.logo img {
+    height: 10vh;
+    width: 12vw;
+    margin-top: 1vh;
+    margin-left: 2vh;
+
+}
+
+menu {
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 1000
+}
+
+nav .menu {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .menu a {
+    height: 100%;
+    padding: 22px 24.5px;
+    border-radius: 2px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+.menu a:hover {
+    background: #00b894;
+    color: black;
+}
+
+
+.main {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    margin-top: 10vh;
+    height: 100;
+    padding-top: 10vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro_image {
+    display: flex;
+    position: relative;
+    margin-left: 12vh;
+    box-shadow: 20px 10px 10px black;
+}
+
+.intro_img {
+    width: 560px;
+    height: 500px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 20vh;
+    height: 45vh;
+    padding: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.intro button {
+    height: 50px;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    border: solid 1px black;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    transition: 0.25s;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.intro button:hover {
+    transition: 0.35s;
+    transform: scale(1.1);
+    box-shadow: black 0px 0px 10px;
+    background-color: #00b894;
+    color: #fff;
+}
+
+.bestsellers-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.bestsellers-body img {
+    width: 100%;
+}
+
+.featured_products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    animation: flow 2s infinite alternate;
+    margin-right: 20px;
+}
+
+@keyframes flow {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(20px);
+    }
+}
+
+.product_card {
+    width: 250px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgb(252, 237, 237);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.product_card:hover {
+    transition: 0.3s;
+    transform: scale(1.04);
+    box-shadow: 0 0 10px;
+}
+
+.product_card img {
+    width: 100%;
+    height: 40vh;
+}
+
+.product_card button {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.product_card button:hover {
+    background-color: #00b894;
+    color: #ddd;
+}
+
+p {
+    text-align: left;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.p2 {
+    font-size: larger;
+}
+
+.recommendations {
+    text-align: center;
+}
+
+
+.reviews_container {
+    display: fixed;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+.review_section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review_section h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.review_card {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.review_card:hover {
+    transform: scale(1.05);
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.feedback {
+    font-style: italic;
+}
+
+.review_form {
+    width: 97%;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review_form:hover{
+    transform: scale(1.03);
+    box-shadow: 10px 10px 10px black;
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form_group textarea {
+    resize: horizontal;
+}
+
+.form_group button {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form_group button:hover {
+    background-color: #00b894;
+    color: white;
+}
+
+.checked {
+    color: orange;
+}
+
+footer {
+    height: 25px;
+}
+
+
+
+
+.contact {
+    width: 100%;
+    height: 22%;
+    background-color: rgb(22, 20, 20);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    margin-top: -12px;
+}
+
+.contact a {
+    color: #fff;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: ;
+}
+
+.contact button {
+    margin: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    background-color: rgb(200, 200, 200);
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: -2px;
+}
+
+.contact button:hover {
+    background-color: rgb(150, 150, 150);
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+
+.contact a:hover {
+    text-shadow: 0 0 10px;
+}
